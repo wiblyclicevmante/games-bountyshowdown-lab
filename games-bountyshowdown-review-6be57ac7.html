@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>赏金大对决 · 再次访问指引</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', 'Helvetica Neue', sans-serif;
+      background: #f4f5f7;
+      color: #1e1f24;
+      line-height: 1.6;
+      padding: 2rem 1.5rem 3rem;
+    }
+    .page {
+      max-width: 1024px;
+      margin: 0 auto;
+    }
+
+    /* ----- hero 区 ----- */
+    .hero {
+      background: #ffffff;
+      border-radius: 32px;
+      padding: 3.2rem 2rem 2.8rem;
+      margin-bottom: 2.5rem;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.02), 0 1px 3px rgba(0,0,0,0.03);
+      border: 1px solid #eaecee;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 2.6rem;
+      font-weight: 620;
+      letter-spacing: -0.02em;
+      color: #121317;
+      margin-bottom: 0.6rem;
+    }
+    .hero .subhead {
+      font-size: 1.1rem;
+      color: #4f525b;
+      max-width: 550px;
+      margin: 0 auto 2rem;
+    }
+    .hero .meta-badge {
+      display: inline-block;
+      background: #e9ebf0;
+      padding: 0.4rem 1.2rem;
+      border-radius: 40px;
+      font-size: 0.9rem;
+      color: #2e313a;
+      border: 1px solid #d7dae0;
+      letter-spacing: 0.3px;
+    }
+
+    /* ----- 卡片网格 / 优势区 & 说明区 ----- */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1.6rem;
+      margin-bottom: 2.8rem;
+    }
+    .card {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 1.8rem 1.5rem 1.6rem;
+      border: 1px solid #e2e5ea;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02), 0 1px 2px rgba(0, 0, 0, 0.02);
+      transition: box-shadow 0.18s;
+    }
+    .card:hover { box-shadow: 0 8px 20px rgba(0,0,0,0.03), 0 2px 6px rgba(0,0,0,0.03); }
+    .card h3 {
+      font-size: 1.2rem;
+      font-weight: 590;
+      margin-bottom: 0.75rem;
+      color: #181a20;
+      border-left: 4px solid #6d7b8f;
+      padding-left: 0.7rem;
+    }
+    .card p {
+      font-size: 0.96rem;
+      color: #3a3d46;
+    }
+    .card .small-note {
+      margin-top: 0.8rem;
+      font-size: 0.87rem;
+      color: #6b707b;
+      background: #f3f4f8;
+      padding: 0.3rem 0.7rem;
+      border-radius: 30px;
+      display: inline-block;
+    }
+
+    /* ----- 说明区 / 拼图式 ----- */
+    .info-block {
+      background: #ffffff;
+      border-radius: 32px;
+      padding: 2.2rem 2rem 2rem;
+      margin-bottom: 2.5rem;
+      border: 1px solid #e2e5ea;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.02);
+    }
+    .info-block h2 {
+      font-weight: 600;
+      font-size: 1.5rem;
+      margin-bottom: 1.4rem;
+      color: #1b1d24;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .info-block h2::before {
+      content: "⋮";
+      font-size: 1.8rem;
+      color: #7c8594;
+      margin-right: 0.4rem;
+    }
+    .info-block p {
+      margin-bottom: 1rem;
+      color: #2e313b;
+    }
+    .info-block ul {
+      margin: 0.8rem 0 1.2rem 1.4rem;
+    }
+    .info-block li {
+      margin-bottom: 0.4rem;
+      color: #373b46;
+    }
+
+    /* ----- FAQ 摘要（简洁） ----- */
+    .faq-summary {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem 2rem;
+      background: #f9fafc;
+      border-radius: 28px;
+      padding: 1.8rem 2rem;
+      margin-bottom: 2.5rem;
+      border: 1px solid #dfe3e9;
+    }
+    .faq-item {
+      flex: 1 1 200px;
+    }
+    .faq-item .q {
+      font-weight: 570;
+      font-size: 1rem;
+      margin-bottom: 0.2rem;
+      color: #1e2028;
+    }
+    .faq-item .a {
+      font-size: 0.92rem;
+      color: #4d525e;
+    }
+
+    /* ----- 底部链接区 ----- */
+    .footer-links {
+      background: #ffffff;
+      border-radius: 32px;
+      padding: 1.8rem 2rem;
+      border: 1px solid #e2e5ea;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+      text-align: center;
+      color: #2d303a;
+    }
+    .footer-links p {
+      font-size: 0.98rem;
+      margin-bottom: 0.5rem;
+    }
+    .footer-links a {
+      color: #1f2937;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px solid #b4bbc7;
+      padding-bottom: 0.05rem;
+    }
+    .footer-links a:hover {
+      border-bottom-color: #1f2937;
+    }
+    .footer-links .muted {
+      color: #6f7582;
+      font-size: 0.9rem;
+    }
+
+    /* 响应式微调 */
+    @media (max-width: 480px) {
+      body { padding: 1.2rem 0.8rem; }
+      .hero { padding: 2rem 1rem; }
+      .hero h1 { font-size: 2rem; }
+      .card-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- hero -->
+  <header class="hero">
+    <h1>赏金大对决</h1>
+    <div class="subhead">你或许曾经来过这里，或者只是听说。无论哪种，这个页面为你整理好了再次关注它的线索与方式。</div>
+    <span class="meta-badge">持续关注 · 收藏指引</span>
+  </header>
+
+  <!-- 优势卡片区 再次访问角度 -->
+  <div class="card-grid">
+    <div class="card">
+      <h3>回访更便捷</h3>
+      <p>如果之前浏览过，你一定会发现内容在不断调整。把本站加入书签，每次回来都能看到活动的真实动态。</p>
+      <span class="small-note">适合固定收藏</span>
+    </div>
+    <div class="card">
+      <h3>追踪变化</h3>
+      <p>奖励规则、任务周期或榜单时常会更新。隔一段时间回来看看，能帮助你了解当前最新的参与条件。</p>
+      <span class="small-note">周期留意</span>
+    </div>
+    <div class="card">
+      <h3>保存与备忘</h3>
+      <p>通过浏览器的收藏夹或笔记工具记录下地址，下次不用重新搜索就能直接定位到活动主页。</p>
+      <span class="small-note">减少遗漏</span>
+    </div>
+    <div class="card">
+      <h3>社区讨论</h3>
+      <p>部分玩家会在社交平台分享关于对决的心得与提醒。关注这些信息也能帮你更全面地参与其中。</p>
+      <span class="small-note">延伸关注</span>
+    </div>
+  </div>
+
+  <!-- 说明区：为什么值得再次访问 -->
+  <div class="info-block">
+    <h2>说明 · 持续关注的理由</h2>
+    <p><strong>赏金大对决</strong> 并不是一个静止不变的活动页面。它的主办方会不定期调整赏金结构、增加新的任务分支或更换结算周期。如果你在第一次访问之后隔了很久才回来，可能会发现界面和规则已经和印象中不完全一样了。</p>
+    <p>这也是为什么我们建议你：</p>
+    <ul>
+      <li><strong>收藏当前地址</strong> —— 把 <a href="https://games-bountyshowdown.com">赏金大对决</a> 加入浏览器的书签栏，这样下次直接点击就能直达最新版本。</li>
+      <li><strong>定期回来扫一眼</strong> —— 即使没有收到邮件或推送，每隔一两周回来看看首页公告，能避免错过重要的时间节点。</li>
+      <li><strong>留意页面底部说明</strong> —— 许多调整细节通常写在页面下方的注释或更新日志里。</li>
+    </ul>
+    <p style="margin-top: 0.8rem;">总之，把这里当作一个可以反复查阅的中转站，而不是一次性页面，能让你在整个活动周期里更从容。</p>
+  </div>
+
+  <!-- FAQ 摘要 -->
+  <div class="faq-summary">
+    <div class="faq-item">
+      <div class="q">◉ 收藏后页面会变吗？</div>
+      <div class="a">收藏的只是链接，每次打开都是实时内容，所以页面更新后你看到的就是最新版。</div>
+    </div>
+    <div class="faq-item">
+      <div class="q">◉ 需要注册才能看吗？</div>
+      <div class="a">首页展示的内容无需登录即可浏览，部分功能或提交入口可能需要账号。</div>
+    </div>
+    <div class="faq-item">
+      <div class="q">◉ 怎么知道有重大更新？</div>
+      <div class="a">除了直接回访，你也可以关注活动关联的官方社交账号，多方确认节奏。</div>
+    </div>
+  </div>
+
+  <!-- 底部链接 -->
+  <div class="footer-links">
+    <p>如果你还没有将 <a href="https://games-bountyshowdown.com">赏金大对决</a> 加入收藏，现在就可以考虑保存下来。</p>
+    <p class="muted">本页仅为整理介绍，不直接参与活动运营。所有规则以网站实时内容为准。</p>
+  </div>
+
+</div>
+</body>
+</html>
